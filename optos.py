@@ -35,7 +35,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-client = OpenAI(
+client = openai.OpenAI(
     organization=os.getenv("ORGANIZATION_ID"),
     project=os.getenv("PROJECT_ID"),
 )
