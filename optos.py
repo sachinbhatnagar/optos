@@ -6,7 +6,7 @@ import logging
 import google.generativeai as genai
 import RPi.GPIO as GPIO
 import time
-import openai
+from openai import OpenAI
 from pathlib import Path
 import pygame
 from pygame import mixer
@@ -35,7 +35,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-client = openai.OpenAI(
+client = OpenAI(
     organization=os.getenv("ORGANIZATION_ID"),
     project=os.getenv("PROJECT_ID"),
 )
