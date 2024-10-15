@@ -35,9 +35,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-client = OpenAI(
-    api_key="sk-DDkzrMX_0FtDRI75XNDt7AafaTiVsNXdDaYRtnAXlDT3BlbkFJcrskl-xndEg_d4iI6ZfaCxRIxKK6Frz02kv4NlLfIA"
-)
+client = OpenAI()
 
 
 model = genai.GenerativeModel(
