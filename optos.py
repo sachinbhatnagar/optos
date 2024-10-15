@@ -35,10 +35,7 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-client = OpenAI(
-    organization=os.getenv("ORGANIZATION_ID"),
-    project=os.getenv("PROJECT_ID"),
-)
+client = OpenAI()
 
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
