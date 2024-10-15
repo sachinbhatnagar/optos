@@ -79,11 +79,14 @@ def upload_to_gemini(path, mime_type=None):
     return file
 
 
+picam2 = Picamera2()
+picam2.configure(picam2.create_still_configuration(main={"size": RESOLUTION}))
+picam2.start()
+
+
 def capture_photo():
     try:
-        picam2 = Picamera2()
-        picam2.configure(picam2.create_still_configuration(main={"size": RESOLUTION}))
-        picam2.start()
+
         picam2.capture_file("image.jpg")
         picam2.stop()
         logging.info("Photo captured successfully")
@@ -146,6 +149,7 @@ def main():
                     if api_response:
                         print("API Response:")
                         print(api_response)
+                        text_to_speech(api_response)
                     else:
                         print("Failed to get API response")
                 else:
