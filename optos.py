@@ -37,6 +37,7 @@ generation_config = {
 
 client = OpenAI()
 
+
 model = genai.GenerativeModel(
     model_name="gemini-1.5-flash",
     generation_config=generation_config,
