@@ -4,7 +4,6 @@ from picamera2 import Picamera2
 import json
 import logging
 import google.generativeai as genai
-import keyboard
 import RPi.GPIO as GPIO
 import time
 import openai
